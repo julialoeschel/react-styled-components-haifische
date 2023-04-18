@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { Aboreto } from "next/font/google";
+
+const aboreto = Aboreto({ subsets: ["latin"], weight: "400" });
 
 export default createGlobalStyle`
   *, 
@@ -15,7 +18,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${aboreto.style.fontFamily};
     padding: 2rem;
   }
 `;
